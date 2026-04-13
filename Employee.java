@@ -17,6 +17,9 @@ public class Employee {
         return this.age;
     }
 
+    public void isWorking() {
+        
+    }
     public void talk() {
         if (!isWorking) {
             System.out.println("My name is " + this.name + " and I am an employee");
