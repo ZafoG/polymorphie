@@ -1,12 +1,11 @@
-public class Supervisor {
+public class Supervisor extends Employee{
 
     private String name;
     private int age;
     private boolean isWatching;
 
     public Supervisor(String name, int age) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
     }
 
     public void setAge(int age) {
