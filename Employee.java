@@ -9,6 +9,10 @@ public class Employee {
         this.age = age;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
@@ -17,8 +21,8 @@ public class Employee {
         return this.age;
     }
 
-    public void isWorking() {
-        
+    public boolean isWorking() {
+        return isWorking;
     }
     public void talk() {
         if (!isWorking) {
