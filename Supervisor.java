@@ -1,10 +1,11 @@
+import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
+import java.util.HashSet;
 
 public class Supervisor extends Employee {
 
     private boolean isWatching;
-    private Set<Employee> employees = new TreeSet<>();
+    private Set<Employee> employees = new HashSet();
 
     public Supervisor(String name, int age) {
         super(name, age);
