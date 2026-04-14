@@ -9,25 +9,38 @@ public class Employee {
         this.age = age;
     }
 
-    public String getName() {
-        return this.name;
+    public void getName() {
+        System.out.println(this.name);
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
-    public int getAge() {
-        return this.age;
+    public void getAge() {
+        System.out.println(this.age);;
     }
 
     public boolean isWorking() {
+
+        if (isWorking) {
+            System.out.println("I am working");
+        } else {
+            System.out.println("I got nothing to do");
+        }
+        ;
+
         return isWorking;
     }
+
     public void talk() {
         if (!isWorking) {
             System.out.println("My name is " + this.name + " and I am an employee");
-        } else { 
+        } else {
             System.out.println("I am employee " + this.name + " and I am currently working");
         }
     }
