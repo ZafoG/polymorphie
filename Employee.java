@@ -37,16 +37,4 @@ public class Employee {
 
         isWorking = true;
     }
-
-    public static void main(String[] args) {
-        Employee m1 = new Employee("Jason", 18);
-        Employee m2 = new Employee("Mason", 36);
-
-        m1.getAge();
-        m1.work();
-        m1.talk();
-
-        m2.getAge();
-        m2.talk();
-    }
 }
