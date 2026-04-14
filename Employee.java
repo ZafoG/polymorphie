@@ -9,8 +9,13 @@ public class Employee {
         this.age = age;
     }
 
-    public void getName() {
+    public void getID() {
+        System.out.println("My name is " + this.getName() + " and I am " + this.getAge());
+    }
+
+    public String getName() {
         System.out.println(this.name);
+        return this.name;
     }
 
     public void setName(String name) {
@@ -21,8 +26,9 @@ public class Employee {
         this.age = age;
     }
 
-    public void getAge() {
-        System.out.println(this.age);;
+    public int getAge() {
+        System.out.println(this.age);
+        return this.age;
     }
 
     public boolean isWorking() {
@@ -32,7 +38,7 @@ public class Employee {
         } else {
             System.out.println("I got nothing to do");
         }
-        ;
+        
 
         return isWorking;
     }
@@ -49,5 +55,17 @@ public class Employee {
         System.out.println(name + " just started working..");
 
         isWorking = true;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (!(other instanceof Employee e)) return false;
+        return (this.getName() == e.getName()) && (this.getAge() == e.getAge());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getAge() * 31;
     }
 }

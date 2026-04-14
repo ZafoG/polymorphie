@@ -9,6 +9,21 @@ public class Main {
         Employee e2 = new Employee("Marcel", 25);
 
         
+        e1.getName();
+        e1.getAge();
+        e1.getID();
+
+        s1.getName();
+        s1.getAge();
+        s1.getID();
+
+        s1.isWatching();
+        s1.isWatching();
+
+        s1.getName();
+
+        s1.addWatch(e2);
+        s1.isWatching();
     }
     
 }

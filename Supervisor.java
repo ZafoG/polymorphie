@@ -1,18 +1,31 @@
-public class Supervisor extends Employee{
+import java.util.Set;
+import java.util.TreeSet;
 
-    
-    private int age;
+public class Supervisor extends Employee {
+
     private boolean isWatching;
+    private Set<Employee> employees = new TreeSet<>();
 
     public Supervisor(String name, int age) {
         super(name, age);
     }
 
+    public void addWatch(Employee employee) {
+        employees.add(employee);
+    }
+
+    public boolean isWatching(Employee employee) {
+        return employees.contains(employee);
+    }
+    public Set<Employee> isWatching() {
+        return employees;
+    }
+
     public void talk() {
-        if (!isWatching) {
+        if (isWatching) {
             System.out.println("I got to do. I can't watch");
         } else {
-            System.out.println("Everyone works");
+            System.out.println("Everyone works, I guess");
         }
     }
 
@@ -22,7 +35,7 @@ public class Supervisor extends Employee{
 
     public void talkAbout(Employee employee) {
         if (employee.isWorking()) {
-            System.out.println(this.name + " is watching " + employee.getName() + " while he works.");
+            System.out.println(this.getName() + " is watching " + employee.getName() + " while he works.");
         } else {
             shoutAt(employee);
         }
