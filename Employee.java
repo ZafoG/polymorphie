@@ -7,6 +7,7 @@ public class Employee {
     public Employee(String name, int age) {
         this.name = name;
         this.age = age;
+        this.isWorking = false;
     }
 
     public void getID() {
@@ -14,7 +15,6 @@ public class Employee {
     }
 
     public String getName() {
-        System.out.println(this.name);
         return this.name;
     }
 
@@ -27,20 +27,24 @@ public class Employee {
     }
 
     public int getAge() {
-        System.out.println(this.age);
         return this.age;
+    }
+
+    public boolean getWorkStatus() {
+
+        return this.isWorking;
     }
 
     public boolean isWorking() {
 
-        if (isWorking) {
+        if (this.isWorking) {
             System.out.println("I am working");
         } else {
             System.out.println("I got nothing to do");
         }
         
 
-        return isWorking;
+        return this.isWorking;
     }
 
     public void talk() {

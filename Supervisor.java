@@ -1,14 +1,17 @@
 import java.util.HashSet;
 import java.util.Set;
-import java.util.HashSet;
 
 public class Supervisor extends Employee {
 
     private boolean isWatching;
-    private Set<Employee> employees = new HashSet();
+    private Set<Employee> employees = new HashSet<>();
 
     public Supervisor(String name, int age) {
         super(name, age);
+    }
+
+    public boolean getIsWatching() {
+        return isWatching;
     }
 
     public void addWatch(Employee employee) {
@@ -20,6 +23,23 @@ public class Supervisor extends Employee {
     }
     public Set<Employee> isWatching() {
         return employees;
+    }
+
+    public boolean isWorking() {
+
+        boolean irgendwas = false;
+
+        if (this.employees.isEmpty()) {
+            System.out.println("I should do something");
+        } else {
+            for (Employee object : this.employees) {
+                object.getName();
+            }
+            irgendwas = true;
+        }
+
+        System.out.println("Those are my employees");
+        return irgendwas;
     }
 
     public void talk() {
