@@ -21,13 +21,13 @@ public class Supervisor extends Employee {
     public boolean isWatching(Employee employee) {
         return employees.contains(employee);
     }
-    public Set<Employee> isWatching() {
+    public Set<Employee> getWatchedEmployees() {
         return employees;
     }
 
     public boolean isWorking() {
 
-        boolean irgendwas = false;
+        boolean hasEmployees = false;
 
         if (this.employees.isEmpty()) {
             System.out.println("I should do something");
@@ -35,11 +35,11 @@ public class Supervisor extends Employee {
             for (Employee object : this.employees) {
                 object.getName();
             }
-            irgendwas = true;
+            hasEmployees = true;
         }
 
         System.out.println("Those are my employees");
-        return irgendwas;
+        return hasEmployees;
     }
 
     public void talk() {

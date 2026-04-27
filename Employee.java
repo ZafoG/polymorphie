@@ -42,7 +42,6 @@ public class Employee {
         } else {
             System.out.println("I got nothing to do");
         }
-        
 
         return this.isWorking;
     }
@@ -63,13 +62,15 @@ public class Employee {
 
     @Override
     public boolean equals(Object other) {
-        if (this == other) return true;
-        if (!(other instanceof Employee e)) return false;
-        return (this.getName() == e.getName()) && (this.getAge() == e.getAge());
+        if (this == other)
+            return true;
+        if (!(other instanceof Employee e))
+            return false;
+        return (this.getName().equals(e.getName())) && (this.getAge() == e.getAge());
     }
 
     @Override
     public int hashCode() {
-        return this.getAge() * 31;
+        return name.hashCode() * 31 + age;
     }
 }
